@@ -1,4 +1,5 @@
-const Cards = () => {
+const Cards = (props) => {
+    const { setActivePage } = props
     return (
         <>
             <section className="cards">
@@ -11,7 +12,7 @@ const Cards = () => {
                                 Lezzetus
                             </h2>
                             <p>Position:Absolute Acı Burger</p>
-                            <button className="btn">SİPARİŞ VER</button>
+                            <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
                         </div>
                         <img src="assets/iteration-2/cta/kart-1.png" alt="" />
                     </div>
@@ -20,7 +21,7 @@ const Cards = () => {
                         <div className="card-top">
                             <div className="card-right-top-text">
                                 <h3>Hackathlon<br />Burger Menü</h3>
-                                <button className="btn">SİPARİŞ VER</button>
+                                <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
                             </div>
                             <img src="assets/iteration-2/cta/kart-2.png" alt="" />
                         </div>
@@ -30,7 +31,7 @@ const Cards = () => {
                                 <h3>
                                     <span id="red-text">Çoooook</span> hızlı<br />npm gibi kurye
                                 </h3>
-                                <button className="btn">SİPARİŞ VER</button>
+                                <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
                             </div>
                         </div>
                     </div>

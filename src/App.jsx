@@ -8,6 +8,8 @@ import OrderForm from './components/OrderForm'
 
 import { useState } from 'react'
 
+
+
 const App = () => {
   const [activePage, setActivePage] = useState('home');
 
@@ -18,7 +20,7 @@ const App = () => {
         <>
           <Header setActivePage={setActivePage} />
           <MenuCategories />
-          <Cards />
+          <Cards setActivePage={setActivePage} />
           <Product />
         </>
       ) : (

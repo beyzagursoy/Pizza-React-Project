@@ -1,3 +1,5 @@
+import productData from '../../productData';
+import menuDataList from './../../menuDataList';
 const Product = () => {
     return (
         <>
@@ -7,47 +9,27 @@ const Product = () => {
                     <h3>Acıktıran Kodlara Doyuran Lezzetler</h3>
                 </div>
                 <nav className="product-nav">
-                    <button className="nav-button"><img src="assets/iteration-2/icons/1.svg" alt="" /> Ramen</button>
-                    <button className="nav-button"><img src="assets/iteration-2/icons/2.svg" alt="" /> Pizza</button>
-                    <button className="nav-button"><img src="assets/iteration-2/icons/3.svg" alt="" /> Burger</button>
-                    <button className="nav-button"><img src="assets/iteration-2/icons/4.svg" alt="" /> French fries</button>
-                    <button className="nav-button"><img src="assets/iteration-2/icons/5.svg" alt="" /> Fast food</button>
-                    <button className="nav-button"><img src="assets/iteration-2/icons/6.svg" alt="" /> Soft drinks</button>
+                    {menuDataList.map((item) => (
+                        <button key={item.id} className="nav-button">
+                            <img src={item.icon} alt={item.title} />
+                            {item.title}
+                        </button>
+                    ))}
                 </nav>
-                <div className="product-items">
-                    <div className="product">
-                        <img src="assets/iteration-2/pictures/food-1.png" alt="" />
-                            <div className="product-box">
-                                <h3>Terminal Pizza</h3>
-                                <div className="product-detail">
-                                    <p className="item">4.9</p>
-                                    <p className="item">(200)</p>
-                                    <p className="item-2">60₺</p>
+                <div className='product-items'>
+                    {productData.map((product) => (
+                        <div className='product' key={product.id}>
+                            <img src={product.image} alt={product.name} />
+                            <div className='product-box'>
+                                <h3>{product.name}</h3>
+                                <div className='product-detail'>
+                                    <p className='item'>{product.rating}</p>
+                                    <p className='item'>({product.reviewCount})</p>
+                                    <p className='item-2'>{product.price}₺</p>
                                 </div>
                             </div>
-                    </div>
-                    <div className="product">
-                        <img src="assets/iteration-2/pictures/food-2.png" alt="" />
-                            <div className="product-box">
-                                <h3>Position Absolute Acı Pizza</h3>
-                                <div className="product-detail">
-                                    <p className="item">4.9</p>
-                                    <p className="item">(200)</p>
-                                    <p className="item-2">60₺</p>
-                                </div>
-                            </div>
-                    </div>
-                    <div className="product">
-                        <img src="assets/iteration-2/pictures/food-3.png" alt="" />
-                            <div className="product-box">
-                                <h3>useEffect Tavuklu burger</h3>
-                                <div className="product-detail">
-                                    <p className="item">4.9</p>
-                                    <p className="item">(200)</p>
-                                    <p className="item-2">60₺</p>
-                                </div>
-                            </div>
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </section>
         </>
