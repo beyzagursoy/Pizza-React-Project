@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import FormInputOrder from "./FormInputOrder"
 
-const ButtonMain = styled.button `
+const ButtonMain = styled.button`
     background: none;
     border: none;
     cursor: pointer;
@@ -11,7 +12,7 @@ const ButtonMain = styled.button `
 const OrderForm = (props) => {
     const { setActivePage } = props
     return (
-        <div className="orderForm">
+        <div className="orderForm-conatiner">
             <header className="orderForm-header">
                 <img src="\assets\iteration-1\logo.svg" />
                 <div>
@@ -23,6 +24,7 @@ const OrderForm = (props) => {
                 </div>
 
             </header>
+            <FormInputOrder />
         </div>
     )
 }

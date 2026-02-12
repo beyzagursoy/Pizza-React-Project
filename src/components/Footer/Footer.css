@@ -1,0 +1,140 @@
+/*Footer*/
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1A;
+}
+
+.footer-box-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1068px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px;
+  gap: 40px;
+}
+
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.logo-2 {
+  width: 220px;
+  height: 100px;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.footer-1-order {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.footer-1-order li {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-1-order li a {
+  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.footer-1-order li img {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-2 {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.footer-2 h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.11px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.footer-2-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7.39px;
+  margin-top: 25px;
+}
+
+.footer-2-details p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+  flex-shrink: 0;
+}
+
+.footer-3 {
+  width: 300px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.footer-3 h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.11px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.footer-3-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.footer-3-details img {
+  width: 30%;
+}
+

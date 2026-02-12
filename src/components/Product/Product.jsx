@@ -1,5 +1,6 @@
-import productData from '../../productData';
-import menuDataList from './../../menuDataList';
+import "./Product.css"
+import productData from '../../../productData';
+import menuDataList from '../../../menuDataList';
 const Product = () => {
     return (
         <>

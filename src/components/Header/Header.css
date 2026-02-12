@@ -1,0 +1,84 @@
+/*..header-main-page-main-page*/
+.header-main-page {
+  background-image: url('assets/iteration-1/home-banner.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 1080px;
+  margin: 0;
+  padding-top: 16px;
+
+}
+
+.t-yemek {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  font-family: 'londrina solid';
+  font-weight: 400px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text h4 {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44.27px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #FDC913;
+}
+
+.text h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FFFFFF;
+  font-size: 86px;
+  line-height: 92px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button {
+  font-family: 'Barlow', sans-serif;
+  background-color: #FDC913;
+  color: #292929;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  width: 193.27px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

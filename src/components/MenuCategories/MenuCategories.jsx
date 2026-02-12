@@ -1,4 +1,5 @@
-import menuData from "../../menuData"
+import "./MenuCategories.css"
+import menuData from "../../../menuData"
 
 const MenuCategories = () => {
     

@@ -1,3 +1,5 @@
+import "./Cards.css"
+
 const Cards = (props) => {
     const { setActivePage } = props
     return (

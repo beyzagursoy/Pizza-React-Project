@@ -1,3 +1,4 @@
+import "./Copyright.css"
 const Copyright = () => {
     return (
         <>

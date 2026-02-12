@@ -1,6 +1,7 @@
-import footerDetailsData from "../../footerDetailsData"
-import footerHotMenuData from "../../footerHatMenuData"
-import footerImageData from "../../footerImageData"
+import "./Footer.css"
+import footerDetailsData from "../../../footerDetailsData"
+import footerHotMenuData from "../../../footerHatMenuData"
+import footerImageData from "../../../footerImageData"
 
 const Footer = () => {
     return (
