@@ -12,7 +12,7 @@ const Header = (props) => {
                         <h2 className="header">KOD ACIKTIRIR</h2>
                         <h2 className="header">PİZZA, DOYURUR</h2>
                     </div>
-                    <button onClick={() => setActivePage("Form")} className="button" href="">ACIKTIM</button>
+                    <button onClick={() => setActivePage("form")} className="button" href="">ACIKTIM</button>
                 </div>
             </header>
         </>

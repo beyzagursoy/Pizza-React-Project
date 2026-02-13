@@ -9,9 +9,9 @@ import NameInfo from "./Order-Forms/NameInfo";
 import Count from "./Order-Forms/Count";
 import Summary from "./Order-Forms/Summary";
 
-const FormInputOrder = () => {
+const FormInputOrder = ({ setActivePage, setOrderData }) => {
   const [ingredientOptions, setIngredientOptions] = useState([]);
-  const [orderData, setOrderData] = useState({
+  const [formData, setFormData] = useState({
     pizzaSize: "",
     doughType: "",
     nameSurname: "",
@@ -32,57 +32,72 @@ const FormInputOrder = () => {
 
     if (type === "checkbox") {
       if (checked) {
-        if (orderData.selectedIngredients.length < 10) {
-          setOrderData({
-            ...orderData,
+        if (formData.selectedIngredients.length < 10) {
+          setFormData({
+            ...formData,
             selectedIngredients: [
-              ...orderData.selectedIngredients,
+              ...formData.selectedIngredients,
               name,
             ],
           });
         }
       } else {
-        setOrderData({
-          ...orderData,
+        setFormData({
+          ...formData,
           selectedIngredients:
-            orderData.selectedIngredients.filter(
+            formData.selectedIngredients.filter(
               (item) => item !== name
             ),
         });
       }
     } else {
-      setOrderData({ ...orderData, [name]: value });
+      setFormData({ ...formData, [name]: value });
     }
   };
 
+  const handleSubmit = (e) => {
+  e.preventDefault()
+
+  if (isFormInvalid) return
+
+  setOrderData({
+    ...formData,
+    ingredientsPrice,
+    finalTotal,
+  })
+
+  setActivePage('success')
+}
+
+
   const increaseQuantity = () => {
-    setOrderData({
-      ...orderData,
-      quantity: orderData.quantity + 1,
+    setFormData({
+      ...formData,
+      quantity: formData.quantity + 1,
     });
   };
 
   const decreaseQuantity = () => {
-    if (orderData.quantity > 1) {
-      setOrderData({
-        ...orderData,
-        quantity: orderData.quantity - 1,
+    if (formData.quantity > 1) {
+      setFormData({
+        ...formData,
+        quantity: formData.quantity - 1,
       });
     }
   };
 
   const isFormInvalid =
-    orderData.selectedIngredients.length < 4 ||
-    orderData.selectedIngredients.length > 10 ||
-    !orderData.pizzaSize ||
-    !orderData.doughType;
+    formData.selectedIngredients.length < 4 ||
+    formData.selectedIngredients.length > 10 ||
+    !formData.pizzaSize ||
+    !formData.doughType;
 
   const ingredientsPrice =
-    orderData.selectedIngredients.length * 5;
+    formData.selectedIngredients.length * 5;
 
   const finalTotal =
     (85.5 + ingredientsPrice) *
-    orderData.quantity;
+    formData.quantity;
 
 
   const TopWrapper = styled.div`
@@ -111,41 +126,41 @@ const FormInputOrder = () => {
   return (
     <form
       style={{ width: "40%" }}
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={handleSubmit}
     >
       <TopWrapper>
         <RadioButton
           handleChange={handleChange}
-          selectedSize={orderData.pizzaSize}
-          showError={!orderData.pizzaSize}
+          selectedSize={formData.pizzaSize}
+          showError={!formData.pizzaSize}
         />
 
         <Selected
           handleChange={handleChange}
-          doughType={orderData.doughType}
-          showError={!orderData.doughType}
+          doughType={formData.doughType}
+          showError={!formData.doughType}
         />
 
       </TopWrapper>
 
       <Checkbox
         ingredientOptions={ingredientOptions}
-        selectedIngredients={orderData.selectedIngredients}
+        selectedIngredients={formData.selectedIngredients}
         handleChange={handleChange}
-        showError={orderData.selectedIngredients.length < 4}
+        showError={formData.selectedIngredients.length < 4}
       />
 
 
       <Divider />
 
       <NameInfo
-        nameSurname={orderData.nameSurname}
+        nameSurname={formData.nameSurname}
         handleChange={handleChange}
-        isInvalid={orderData.nameSurname.trim().length < 3}
+        isInvalid={formData.nameSurname.trim().length < 3}
       />
 
       <TextArea
-        orderNote={orderData.orderNote}
+        orderNote={formData.orderNote}
         handleChange={handleChange}
       />
 
@@ -154,13 +169,14 @@ const FormInputOrder = () => {
         <Count
           increaseQuantity={increaseQuantity}
           decreaseQuantity={decreaseQuantity}
-          quantity={orderData.quantity}
+          quantity={formData.quantity}
         />
 
         <Summary
           ingredientsPrice={ingredientsPrice}
           finalTotal={finalTotal}
           isFormInvalid={isFormInvalid}
+          
         />
       </BottomSection>
     </form>

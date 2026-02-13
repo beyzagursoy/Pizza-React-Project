@@ -26,16 +26,16 @@ const Wrapper = styled.div`
 `;
 
 
-const OrderForm = (props) => {
-    const { setActivePage } = props
+const OrderForm = ({ setActivePage, setOrderData }) => {
     return (
         <div className="orderForm-conatiner">
             <Header className="orderForm-header">
-                <ImgNew  src="\assets\iteration-1\logo.svg" />
+                <ImgNew src="/assets/iteration-1/logo.svg" />
             </Header>
-            <OrderInfo setActivePage={setActivePage}/>
-            <Wrapper><FormInputOrder /></Wrapper>
-            
+            <OrderInfo />
+            <Wrapper><FormInputOrder setActivePage={setActivePage}
+                setOrderData={setOrderData} /></Wrapper>
+
         </div>
     )
 }

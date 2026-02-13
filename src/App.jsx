@@ -5,14 +5,13 @@ import Product from './components/Product/Product'
 import Footer from './components/Footer/Footer'
 import Copyright from './components/Copyright/Copyright'
 import OrderForm from './components/OrderForm'
+import SuccessPage from './components/Order-Forms/OrderSuccess'
 
 import { useState } from 'react'
 
-
-
 const App = () => {
-  const [activePage, setActivePage] = useState('home');
-
+  const [activePage, setActivePage] = useState('home')
+  const [orderData, setOrderData] = useState(null)
 
   return (
     <>
@@ -23,11 +22,18 @@ const App = () => {
           <Cards setActivePage={setActivePage} />
           <Product />
         </>
+      ) : activePage === 'form' ? (
+        <OrderForm
+          setActivePage={setActivePage}
+          setOrderData={setOrderData}
+        />
       ) : (
-        <>
-          <OrderForm setActivePage={setActivePage} />
-        </>
+        <SuccessPage
+          setActivePage={setActivePage}
+          orderData={orderData}
+        />
       )}
+
       <Footer />
       <Copyright />
     </>
@@ -35,23 +41,3 @@ const App = () => {
 }
 
 export default App
-
-/* const [activePage, setActivePage] = useState("Home");
-const [orderData, setOrderData] = useState(null);
-  return (
-    <>
-    {activePage === "Home" ? (
-    <>
-    <Header setActivePage={setActivePage}/>
-    <NavLinks NavLinkData={NavLinkData}/>
-    <MainPizza setActivePage={setActivePage}/>
-    </>
-    ) : activePage === "Form" ? (
-    <OrderForm setActivePage={setActivePage} setOrderData={setOrderData} />
-    ) : (
-    <SuccessPage setActivePage={setActivePage} orderData={orderData} />
-    )}
-    <Footer />
-    </>
-  );
-}* */

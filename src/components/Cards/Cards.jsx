@@ -14,7 +14,7 @@ const Cards = (props) => {
                                 Lezzetus
                             </h2>
                             <p>Position:Absolute Acı Burger</p>
-                            <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
+                            <button onClick={() => setActivePage("form")} className="btn">SİPARİŞ VER</button>
                         </div>
                         <img src="assets/iteration-2/cta/kart-1.png" alt="" />
                     </div>
@@ -23,7 +23,7 @@ const Cards = (props) => {
                         <div className="card-top">
                             <div className="card-right-top-text">
                                 <h3>Hackathlon<br />Burger Menü</h3>
-                                <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
+                                <button onClick={() => setActivePage("form")} className="btn">SİPARİŞ VER</button>
                             </div>
                             <img src="assets/iteration-2/cta/kart-2.png" alt="" />
                         </div>
@@ -33,7 +33,7 @@ const Cards = (props) => {
                                 <h3>
                                     <span id="red-text">Çoooook</span> hızlı<br />npm gibi kurye
                                 </h3>
-                                <button onClick={() => setActivePage("Form")} className="btn">SİPARİŞ VER</button>
+                                <button onClick={() => setActivePage("form")} className="btn">SİPARİŞ VER</button>
                             </div>
                         </div>
                     </div>
