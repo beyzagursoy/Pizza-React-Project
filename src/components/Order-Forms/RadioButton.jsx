@@ -1,21 +1,80 @@
-const RadioButton = (props) => {
-    const {handleChange, selectedSize} = props
-    return (
-        <section className="order-radio-btn">
-            <h2>Boyut Seç *</h2>
-            <label htmlFor="radioA">
-                <input id="radioA" type="radio" name="pizzaSize" value="Küçük" onChange={handleChange} checked={selectedSize === "Küçük"} />Küçük
-            </label><br />
+import styled from "styled-components";
 
-            <label htmlFor="radioB">
-                <input id="radioB" type="radio" name="pizzaSize" value="Standart" onChange={handleChange} checked={selectedSize === "Standart"} />Standart
-            </label><br />
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Barlow', sans-serif;
+`;
 
-            <label htmlFor="radioC">
-                <input id="radioC" type="radio" name="pizzaSize" value="Büyük" onChange={handleChange} checked={selectedSize === "Büyük"} />Büyük
-            </label>
-        </section>
-    )
-}
+const Title = styled.h2`
+  font-size: 20px;
+  font-weight: 600;
+`;
 
-export default RadioButton
+const SizeWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const HiddenRadio = styled.input`
+  display: none;
+`;
+
+const SizeButton = styled.label`
+  color: #5F5F5F;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ selected }) =>
+    selected ? "#FFEECC" : "#FAF7F2"};
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: ${({ selected }) =>
+      selected ? "#FFEECC" : "#FAF7F2"};
+  }
+`;
+
+const RadioButton = ({ handleChange, selectedSize, showError }) => {
+  const sizes = ["S", "M", "L"];
+
+  return (
+    <Section>
+      <Title>
+        Boyut Seç <span style={{ color: "red" }}>*</span>
+      </Title>
+
+      <SizeWrapper>
+        {sizes.map((size) => (
+          <div key={size}>
+            <HiddenRadio
+              type="radio"
+              name="pizzaSize"
+              value={size}
+              onChange={handleChange}
+              checked={selectedSize === size}
+              id={size}
+            />
+            <SizeButton htmlFor={size} selected={selectedSize === size}>
+              {size}
+            </SizeButton>
+          </div>
+        ))}
+      </SizeWrapper>
+      {showError && (
+        <span style={{ color: "red", fontSize: "14px" }}>
+          Boyutu seçiniz.
+        </span>
+      )}
+    </Section>
+  );
+};
+
+export default RadioButton;

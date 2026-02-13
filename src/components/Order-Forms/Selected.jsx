@@ -1,17 +1,60 @@
-const Selected = (props) => {
-    const { handleChange } = props;
+import styled from "styled-components";
 
-    return (
-        <section className="order-section-btn">
-            <h2>Hamur Seç *</h2>
-            <select onChange={handleChange} name="doughType" defaultValue="">
-                <option value="" disabled hidden>Hamur Kalınlığı</option>
-                <option value="thin">İnce Hamur</option>
-                <option value="standart">Standart</option>
-                <option value="thick">Kalın Hamur</option>
-            </select>
-        </section>
-    )
-}
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Barlow', sans-serif;
+`;
 
-export default Selected
+const Title = styled.h2`
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+const StyledSelect = styled.select`
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #FAF7F2;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: 2px solid #FFEECC";
+  }
+`;
+
+const Selected = ({ handleChange, doughType, showError }) => {
+  return (
+    <Section>
+      <Title>
+        Hamur Seç <span style={{ color: "red" }}>*</span>
+      </Title>
+
+      <StyledSelect
+        name="doughType"
+        value={doughType}
+        onChange={handleChange}
+      >
+        <option value="" disabled hidden>
+          — Hamur Kalınlığı Seç —
+        </option>
+        <option value="thin">İnce Hamur</option>
+        <option value="standart">Standart</option>
+        <option value="thick">Kalın Hamur</option>
+      </StyledSelect>
+
+      {showError && (
+        <span style={{ color: "red", fontSize: "14px" }}>
+          Hamur tipini seçiniz.
+        </span>
+      )}
+    </Section>
+  );
+};
+
+
+export default Selected;

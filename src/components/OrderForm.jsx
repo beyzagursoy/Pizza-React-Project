@@ -1,30 +1,41 @@
 import styled from "styled-components"
 import FormInputOrder from "./FormInputOrder"
+import OrderInfo from "./Order-Forms/OrderInfo"
 
-const ButtonMain = styled.button`
-    background: none;
-    border: none;
-    cursor: pointer;
-    fornt-family: 'Barlow';
-    font-size: 16px;
+const Header = styled.header`
+    background-color: #CE2829;
+    border: 1px solid #C20608;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    
 `
+const ImgNew = styled.img`
+    margin-bottom: 35px;
+`
+
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #FFFF !important;
+    margin: 0 auto;  
+`;
+
 
 const OrderForm = (props) => {
     const { setActivePage } = props
     return (
         <div className="orderForm-conatiner">
-            <header className="orderForm-header">
-                <img src="\assets\iteration-1\logo.svg" />
-                <div>
-                    <nav className="form-navigation">
-                        <ButtonMain onClick={() => setActivePage('home')} className="form-btn">Anasayfa</ButtonMain>
-                        <span className="form-seperate">-</span>
-                        <span className="form-active">Sipariş Oluştur</span>
-                    </nav>
-                </div>
-
-            </header>
-            <FormInputOrder />
+            <Header className="orderForm-header">
+                <ImgNew  src="\assets\iteration-1\logo.svg" />
+            </Header>
+            <OrderInfo setActivePage={setActivePage}/>
+            <Wrapper><FormInputOrder /></Wrapper>
+            
         </div>
     )
 }

@@ -35,3 +35,23 @@ const App = () => {
 }
 
 export default App
+
+/* const [activePage, setActivePage] = useState("Home");
+const [orderData, setOrderData] = useState(null);
+  return (
+    <>
+    {activePage === "Home" ? (
+    <>
+    <Header setActivePage={setActivePage}/>
+    <NavLinks NavLinkData={NavLinkData}/>
+    <MainPizza setActivePage={setActivePage}/>
+    </>
+    ) : activePage === "Form" ? (
+    <OrderForm setActivePage={setActivePage} setOrderData={setOrderData} />
+    ) : (
+    <SuccessPage setActivePage={setActivePage} orderData={orderData} />
+    )}
+    <Footer />
+    </>
+  );
+}* */
