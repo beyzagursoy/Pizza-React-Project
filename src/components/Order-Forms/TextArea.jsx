@@ -13,12 +13,16 @@ const Label = styled.label`
   color: #292929;
 `;
 
-const Input = styled.input`
+
+const TextAreaBox = styled.textarea`
   padding: 20px;
+  min-height: 56px; 
   border-radius: 6px;
   border: none;
   background-color: #FAF7F2;
   font-size: 14px;
+  min-height: 100px;
+  resize: none;
 
   &::placeholder {
     color: #5F5F5F;
@@ -42,10 +46,9 @@ const TextArea = ({ orderNote, handleChange }) => {
     <>
       <Container>
         <Label htmlFor="orderNote">Sipariş Notu</Label>
-        <Input
+        <TextAreaBox
           id="orderNote"
           name="orderNote"
-          type="text"
           value={orderNote}
           onChange={handleChange}
           placeholder="Siparişine eklemek istediğin bir not var mı?"

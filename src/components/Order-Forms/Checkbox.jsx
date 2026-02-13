@@ -51,7 +51,7 @@ const Box = styled.div`
   justify-content: center;
   font-size: 22px;
   font-weight: bold;
-  color: #2e2e2e;
+  color: #5F5F5F;
   transition: 0.2s;
 `;
 

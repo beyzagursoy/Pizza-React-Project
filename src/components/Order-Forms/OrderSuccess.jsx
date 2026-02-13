@@ -19,6 +19,7 @@ const HeaderLogo = styled.h1`
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 60px;
+  font-family: Londrina Solid
 `;
 
 const Tagline = styled.p`

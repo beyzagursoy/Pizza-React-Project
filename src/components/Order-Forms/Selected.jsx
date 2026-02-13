@@ -42,9 +42,9 @@ const Selected = ({ handleChange, doughType, showError }) => {
         <option value="" disabled hidden>
           — Hamur Kalınlığı Seç —
         </option>
-        <option value="thin">İnce Hamur</option>
-        <option value="standart">Standart</option>
-        <option value="thick">Kalın Hamur</option>
+        <option value="İnce Hamur">İnce Hamur</option>
+        <option value="Standart">Standart</option>
+        <option value="Kalın Hamur">Kalın Hamur</option>
       </StyledSelect>
 
       {showError && (
