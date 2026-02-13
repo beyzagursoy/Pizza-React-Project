@@ -15,6 +15,10 @@ const Title = styled.h2`
 const SizeWrapper = styled.div`
   display: flex;
   gap: 20px;
+
+  @media (max-width: 540px) {
+    justify-content: space-between;
+  }
 `;
 
 const HiddenRadio = styled.input`

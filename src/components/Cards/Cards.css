@@ -172,3 +172,47 @@
   vertical-align: middle;
   letter-spacing: 0;
 }
+
+@media (max-width: 1000px) {
+
+  .cards-box {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .card-left {
+    width: 100%;
+    max-width: 100%;
+    height: 330px;
+  }
+
+  .card-left img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .card-top,
+  .card-bottom {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .cards-right {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+  }
+}

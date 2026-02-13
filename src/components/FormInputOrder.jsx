@@ -15,6 +15,11 @@ const TopWrapper = styled.div`
   justify-content: space-between;
   gap: 60px;
   align-items: flex-start;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const Divider = styled.div`
@@ -29,6 +34,20 @@ const BottomSection = styled.div`
   align-items: flex-start;
   margin-top: 30px;
   gap: 60px;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+`;
+
+const StyledForm = styled.form`
+  width: 40%;
+
+  @media (max-width: 540px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;
 
 const FormInputOrder = ({ setActivePage, setOrderData }) => {
@@ -133,7 +152,7 @@ const FormInputOrder = ({ setActivePage, setOrderData }) => {
   };
 
   return (
-    <form style={{ width: "40%" }} onSubmit={handleSubmit}>
+    <StyledForm style={{ width: "40%" }} onSubmit={handleSubmit}>
       <TopWrapper>
         <RadioButton
           handleChange={handleChange}
@@ -181,7 +200,7 @@ const FormInputOrder = ({ setActivePage, setOrderData }) => {
           isFormInvalid={isFormInvalid}
         />
       </BottomSection>
-    </form>
+    </StyledForm>
   );
 };
 

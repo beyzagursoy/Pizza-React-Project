@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import OrderSucces from './OrderSuccess';
 
 const Container = styled.div`
-  background-color: #ce2829;
+  background-color: #CE2829;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ const HeaderLogo = styled.h1`
 
 const Tagline = styled.p`
   font-family: 'Satisfy', cursive; /* El yazısı fontu */
-  color: #fdc913;
+  color: #FDC913;
   font-size: 1.8rem;
   margin-bottom: 10px;
 `;
@@ -42,6 +42,7 @@ const Title = styled.h2`
 `;
 
 const OrderDetails = styled.div`
+  color: #ffff;
   margin-top: 40px;
   line-height: 1.8;
   

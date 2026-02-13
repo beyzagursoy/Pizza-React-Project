@@ -82,3 +82,26 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+
+  .header-main-page {
+    background-image: url("assets/iteration-1/home-banner.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-color: #ce2829;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-main-page h4 {
+    display: none;
+  }
+
+  .header-main-page h2 {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

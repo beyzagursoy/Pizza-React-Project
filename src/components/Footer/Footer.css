@@ -138,3 +138,22 @@
   width: 30%;
 }
 
+@media (max-width: 1000px) {
+
+  .footer-1 img {
+    align-items: flex-start;
+  }
+
+  .footer-box-1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-2,
+  .footer-3 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+}
+

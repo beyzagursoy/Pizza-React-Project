@@ -27,6 +27,11 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 40px;
   margin-top: 15px;
+
+  @media (max-width: 540px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 `;
 
 const HiddenCheckbox = styled.input`

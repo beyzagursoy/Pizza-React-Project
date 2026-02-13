@@ -23,7 +23,11 @@ const StyledSelect = styled.select`
 
   &:focus {
     outline: none;
-    border: 2px solid #FFEECC";
+    border: 2px solid #FFEECC;
+  }
+
+  @media (max-width: 540px) {
+    width: 100%;
   }
 `;
 

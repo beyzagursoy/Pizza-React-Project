@@ -32,3 +32,36 @@
   gap: 12px;
   color: #292929;
 }
+
+@media (max-width: 1000px) {
+
+  .menu-categories nav {
+    height: auto;
+    padding: 24px 0;
+  }
+
+  .menu-categories nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 41px 41px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .menu-categories nav li {
+    width: auto;
+  }
+
+  .menu-categories nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    justify-content: flex-start;
+  }
+
+  .menu-categories nav img {
+    width: 42px;
+    height: 42px;
+  }
+}

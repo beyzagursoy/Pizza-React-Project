@@ -118,3 +118,19 @@
   vertical-align: middle;
   color: #292929;
 }
+
+@media (max-width: 1000px) {
+
+  .product-nav {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 41px 41px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .product-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
