@@ -47,6 +47,7 @@ const NameInfo = (props) => {
           id="nameSurname"
           name="nameSurname"
           type="text"
+          data-cy="name-input"
           value={nameSurname}
           onChange={handleChange}
           placeholder="İsim bilgilerinizi giriniz."

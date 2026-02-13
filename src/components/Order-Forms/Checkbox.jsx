@@ -79,6 +79,7 @@ const Checkbox = ({ ingredientOptions, handleChange, selectedIngredients, showEr
                 id={e.name}
                 name={e.name}
                 type="checkbox"
+                data-cy="ingredient-checkbox"
                 checked={isChecked}
                 onChange={handleChange}
                 disabled={limitReached}

@@ -70,7 +70,7 @@ const Summary = ({ ingredientsPrice, finalTotal, isFormInvalid }) => {
         </TotalRow>
       </Card>
 
-      <SubmitButton disabled={isFormInvalid} type="submit">
+      <SubmitButton disabled={isFormInvalid} type="submit" data-cy="submit-button">
         SİPARİŞ VER
       </SubmitButton>
     </Wrapper>

@@ -57,6 +57,7 @@ const RadioButton = ({ handleChange, selectedSize, showError }) => {
             <HiddenRadio
               type="radio"
               name="pizzaSize"
+              data-cy="size-radio"
               value={size}
               onChange={handleChange}
               checked={selectedSize === size}

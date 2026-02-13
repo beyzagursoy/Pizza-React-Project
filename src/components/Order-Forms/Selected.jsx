@@ -36,6 +36,7 @@ const Selected = ({ handleChange, doughType, showError }) => {
 
       <StyledSelect
         name="doughType"
+        data-cy="dough-select"
         value={doughType}
         onChange={handleChange}
       >

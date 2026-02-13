@@ -86,7 +86,6 @@ const Row = styled.div`
 `;
 
 const OrderSuccess = ({ orderData }) => {
-  // Eğer test ediyorsan ve orderData boşsa hata almamak için:
   if (!orderData) return <Container>Sipariş verisi yükleniyor...</Container>;
 
   return (
@@ -94,7 +93,7 @@ const OrderSuccess = ({ orderData }) => {
       <HeaderLogo>Teknolojik Yemekler</HeaderLogo>
 
       <Tagline>lezzetin yolda</Tagline>
-      <Title>SİPARİŞ ALINDI</Title>
+      <Title data-cy="success-title">SİPARİŞ ALINDI</Title>
 
       <OrderDetails>
         <h4>Position Absolute Acı Pizza</h4>

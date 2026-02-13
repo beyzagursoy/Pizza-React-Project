@@ -10,7 +10,8 @@ import SuccessPage from './components/Order-Forms/OrderSuccess'
 import { useState } from 'react'
 
 const App = () => {
-  const [activePage, setActivePage] = useState('home')
+ const [activePage, setActivePage] = useState(import.meta.env.MODE === 'test' ? 'form' : 'home')
+
   const [orderData, setOrderData] = useState(null)
 
   return (
