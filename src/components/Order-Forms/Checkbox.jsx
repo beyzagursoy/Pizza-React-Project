@@ -64,7 +64,7 @@ const Text = styled.span`
 const Checkbox = ({ ingredientOptions, handleChange, selectedIngredients, showError }) => {
   return (
     <Container>
-      <Title>Ek Malzemeler</Title>
+      <Title>Ek Malzemeler <span style={{ color: "red" }}>*</span></Title>
       <Info>En az 4, en fazla 10 malzeme seçebilirsiniz. 5₺</Info>
 
       <Grid>

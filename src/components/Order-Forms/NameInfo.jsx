@@ -42,7 +42,7 @@ const NameInfo = (props) => {
     return (
         <>
       <Container>
-        <Label htmlFor="nameSurname">Ad Soyad</Label>
+        <Label htmlFor="nameSurname">Ad Soyad <span style={{ color: "red" }}>*</span></Label>
         <Input
           id="nameSurname"
           name="nameSurname"
